@@ -105,8 +105,21 @@
       Callback queue - data structure - contains all callback functions ready to
       be excuted. Event Loop - essential for non-blocking concurrency model.
     </p>
-    <h2>Execution Contexts and The Call Stack</h2>
-    <p></p>
+    <h2>Execution Context</h2>
+    <p>
+      Environment in which piece of JavScript is executed. Stores all the
+      necessary information for some codes to be executed. Exactly one global
+      execution context (EC): Default context, created code that is not inside
+      any function (top level).
+    </p>
+    <p>
+      One execution context per function - for each function call. For each
+      function call, new execution context is created.
+    </p>
+    <p>
+      Inside execution context? Variable environment - let, const, var
+      declations, functions, argument objects.
+    </p>
     <script src="scriptbehindscenes.js"></script>
   </body>
 </html>
