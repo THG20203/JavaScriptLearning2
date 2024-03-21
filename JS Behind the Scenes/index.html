@@ -93,6 +93,20 @@
       Just-in-time (JIT) compilation: Entire code is converted into machine code
       at once, then executed immediately.
     </p>
+    <p>
+      Parsing code (read code) -> Parsing process - code is parsed into a data
+      structure called AST. Optimisation is happening too.
+    </p>
+    <p>
+      JavaScript runtime - container including all the things that we need to
+      use JavaScript (in this case the browser). Core part of runtime is JS
+      Engine. Also need Web API's (DOM, console.log etc). JavaScript gets access
+      to Web Api's (THAT AREN'T PART OF JS) through the global window object.
+      Callback queue - data structure - contains all callback functions ready to
+      be excuted. Event Loop - essential for non-blocking concurrency model.
+    </p>
+    <h2>Execution Contexts and The Call Stack</h2>
+    <p></p>
     <script src="scriptbehindscenes.js"></script>
   </body>
 </html>
