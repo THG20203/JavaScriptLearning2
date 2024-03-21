@@ -20,40 +20,53 @@
     </p>
     <ul>
       <li>
-        High-level - don't have to manage resources - everything happens
-        automatically.
+        <strong>High-level</strong> - don't have to manage resources -
+        everything happens automatically.
       </li>
-      <li>Garbage-collected - cleaning memory for us</li>
+      <li><strong>Garbage-collected</strong> - cleaning memory for us</li>
       <li>
-        Interpreted or just-in-time compiled - computers processor only
-        understands 0's, 1's. JavaScript is humen readable - abstraction of
-        machine code - that step is compiling / interpreting in JavaScript
-        engine.
-      </li>
-      <li>
-        Multi paradigm - paradigm is an approach / mindset of structuring code.
-        JavaScript multi paradigm (flexible) - procedural, object orientated,
-        functional programming. imperitive / declarative.
+        <strong>Interpreted or just-in-time compiled</strong> - computers
+        processor only understands 0's, 1's. JavaScript is humen readable -
+        abstraction of machine code - that step is compiling / interpreting in
+        JavaScript engine.
       </li>
       <li>
-        Prototype-based object-orientated - JavaScript -> almost everything is
-        an object, except primitive values like numbers, strings. arrays for
-        example are just objects. Protoype inheritence. Create arrays from array
-        blueprint (template), called a prototype. This contains all the array
-        methods. The arrays that we create in our code then inherit the methods
-        from the blue print (so we can use them on the arrays).
+        <strong>Multi paradigm</strong> - paradigm is an approach / mindset of
+        structuring code. JavaScript multi paradigm (flexible) - procedural,
+        object orientated, functional programming. imperitive / declarative.
       </li>
       <li>
-        First-class functions - means functions = variables. Can pass them into
-        other functions, return functions from functions.
+        <strong>Prototype-based object-orientated</strong> - JavaScript ->
+        almost everything is an object, except primitive values like numbers,
+        strings. arrays for example are just objects. Protoype inheritence.
+        Create arrays from array blueprint (template), called a prototype. This
+        contains all the array methods. The arrays that we create in our code
+        then inherit the methods from the blue print (so we can use them on the
+        arrays).
       </li>
       <li>
-        Dynamic - no data type definitions. Types becomes known at runtime. Data
-        type of varialbe is automatically changed. let x = 23;<br />
+        <strong>First-class functions</strong> - means functions = variables.
+        Can pass them into other functions, return functions from functions.
+      </li>
+      <li>
+        <strong>Dynamic</strong> - no data type definitions. Types becomes known
+        at runtime. Data type of varialbe is automatically changed. let x =
+        23;<br />
         x= "Jonas";
       </li>
-      <li>Single-threaded</li>
-      <li>Non-blocking event loop</li>
+      <li>
+        <strong>Single-threaded</strong> - Concuerrancy model = how JavaScript
+        handles multiple tasks happening at the same time. Why do we need that?
+        JavaScript runs in one single threat, so it can only do one thing at a
+        time. Thread = set of instructions executed in CPU.
+      </li>
+      <li>
+        <strong>Non-blocking event loop</strong> - What about a long running
+        task? Sounds like it would block the single thread. But, we want non
+        blocking behavior. How do we achieve that? Event loop - event loop:
+        takes long running tasks, executes them in the background, puts them
+        back in main thread once they are finished.
+      </li>
     </ul>
     <script src="scriptbehindscenes.js"></script>
   </body>
