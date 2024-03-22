@@ -117,3 +117,19 @@ matilda.calcAge3(); // will give us correct result. this keyword in jonas points
 But this doesn't work for functions - only for objects. */
 
 /* REGULAR vs ARROW FUNCTIONS */
+const tristan = {
+  firstName: "Tristan",
+  year: 1997,
+  calcAge4: function () {
+    console.log(this);
+    console.log(2037 - this.year);
+  },
+
+  greet: () => {
+    console.log(`Hey ${this.firstName}`);
+  },
+};
+
+tristan.greet();
+/* Hey undefined -> reason is arrow function, arrow functions don't get their 
+own this keyword. greet is an arrow function */
