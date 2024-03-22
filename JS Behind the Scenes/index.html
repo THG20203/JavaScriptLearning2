@@ -116,9 +116,21 @@
       One execution context per function - for each function call. For each
       function call, new execution context is created.
     </p>
+    <p>Inside execution context?</p>
+
+    <ul>
+      <li>
+        Variable environment - let, const, var declations, functions, argument
+        object - (this arguments object contains all the arguments that were
+        passed into the object that the current execution context belongs to).
+      </li>
+      <li>Scope Chain</li>
+      <li>This Keyword</li>
+    </ul>
     <p>
-      Inside execution context? Variable environment - let, const, var
-      declations, functions, argument objects.
+      Arrow functions don't get arguments object and this keyword. Instead they
+      can use arguments object and this keyword from their closest function
+      parent.
     </p>
     <script src="scriptbehindscenes.js"></script>
   </body>
