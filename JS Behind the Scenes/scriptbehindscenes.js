@@ -38,6 +38,10 @@ let job = "teacher";
 const year = 1991;
 
 /* hoisting with functions */
+console.log(addDeclr(2, 3)); // get 5 -> can call function declaration before defined in code
+console.log(addExpr(2, 3)); // cannot access addExpr before initialisation
+console.log(arrow(2, 3)); // cannot access addExpr before initialisation
+
 /* declaration */
 function addDeclr(a, b) {
   return a + b;
@@ -50,3 +54,15 @@ const addExpr = function (a, b) {
 
 /* arrow */
 const arrow = (a, b) => a + b;
+
+/* pitfall of hoisting? */
+/* delete shopping carts when number is 0, 0 is falsy value so can write: */
+if (!numProducts) deleteShoppingCart;
+
+var numProducts = 10;
+
+function deleteShoppingCart() {
+  console.log("All products deleted"); // get all products deleted despite numProducts = 10
+}
+
+/* Why cause if (!numProducts) deleteShoppingCart; was before var numProducts = 10 */
