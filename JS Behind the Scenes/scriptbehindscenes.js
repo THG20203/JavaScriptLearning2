@@ -112,3 +112,8 @@ const matilda = {
 
 /* copying calcAge method from jonas to matilda -> called method borrowing */
 matilda.calcAge3 = jonas.calcAge3;
+matilda.calcAge3(); // will give us correct result. this keyword in jonas points to matilda object
+/* proves that this keyword always points to the object that is calling the method.
+But this doesn't work for functions - only for objects. */
+
+/* REGULAR vs ARROW FUNCTIONS */
