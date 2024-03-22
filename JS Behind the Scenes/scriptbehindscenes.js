@@ -95,3 +95,20 @@ const calcAgeArrow = (birthYear) => {
   console.log(this);
 };
 calcAgeArrow(1980);
+
+/* trying to use this keyword inside of a method? - function attached to jonas object */
+/* the method will provide the jonas object! */
+const jonas = {
+  year: 1991,
+  calcAge3: function () {
+    console.log(this);
+  },
+};
+jonas.calcAge3();
+
+const matilda = {
+  year: 2017,
+};
+
+/* copying calcAge method from jonas to matilda -> called method borrowing */
+matilda.calcAge3 = jonas.calcAge3;
