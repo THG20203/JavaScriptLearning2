@@ -147,6 +147,33 @@
       environment in the case of functions). Theres globa scope, function scope
       and block scope.
     </p>
+    <p>
+      Scope of a variable = entire region of code where a certain variable can
+      be accessed.
+    </p>
+    <ul>
+      <li>
+        Global scope - outside of any function / block. Variables declared in
+        global scope - accessible everywhere.
+      </li>
+      <li>
+        Function scope = only accessible inside function, not outside. also
+        called local scope.
+      </li>
+      <li>
+        Block scope (ES6) Variables are accessible only inside block (block
+        scoped). However, this only applies to let and const. Functions are also
+        block scope (only in strict mode).
+      </li>
+    </ul>
+    <p>
+      Scope chain look up in the chain scope. Variable look up but NOT down.
+    </p>
+    <p>Scope Chain vs Call Stack</p>
+    <p>
+      Scope chain has nothing to do with order in which functions are called.
+      Its the order functions are written into the code.
+    </p>
     <script src="scriptbehindscenes.js"></script>
   </body>
 </html>
