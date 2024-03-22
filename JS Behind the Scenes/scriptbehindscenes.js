@@ -26,3 +26,27 @@ const calcAge = (birthYear) => {
 const firstName = "Tristan";
 
 calcAge(1991);
+
+/* HOISTING */
+/* hoisting with variables */
+console.log(me); // undefined - var values hoisted to undefined
+console.log(job); // cannot access job before initialization
+console.log(year); // cannot access year before initialization
+
+var me = "Jonas";
+let job = "teacher";
+const year = 1991;
+
+/* hoisting with functions */
+/* declaration */
+function addDeclr(a, b) {
+  return a + b;
+}
+
+/* expression */
+const addExpr = function (a, b) {
+  return a + b;
+};
+
+/* arrow */
+const arrow = (a, b) => a + b;
