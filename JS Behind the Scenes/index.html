@@ -190,7 +190,32 @@
       porperly exist.
     </p>
     <h2>THIS KEYWORD</h2>
-    <p></p>
+    <p>
+      This keyword - one of three components of an execution context, along with
+      variable environment and scope chain.
+    </p>
+    <p>
+      This keyword - takes the value of (points to) the 'owner' of the function
+      in which the this keyword is used.
+    </p>
+    <p>
+      This is NOT static. It depends on how the function is called, and its
+      value is only assingned when the function is actually called.
+    </p>
+    <ul>
+      <li>Method - this keyword = Object that is calling the method.</li>
+      <li>
+        Simple function call - this = undefined - in strict mode - otherwise
+        window:
+      </li>
+      <li>
+        Arrow function - this = this of surrounding function (arrow functions
+        don't get this keyword)
+      </li>
+      <li>
+        Event listener - this = DOM element that the handler is attached to
+      </li>
+    </ul>
     <script src="scriptbehindscenes.js"></script>
   </body>
 </html>

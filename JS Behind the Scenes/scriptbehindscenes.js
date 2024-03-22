@@ -77,3 +77,5 @@ const z = 3; // WON'T create property on window object
 console.log(x === window.x); // true
 console.log(y === window.y); // false
 console.log(z === window.z); // false
+
+/* THIS KEYWORD */
