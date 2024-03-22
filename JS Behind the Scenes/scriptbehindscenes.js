@@ -66,3 +66,14 @@ function deleteShoppingCart() {
 }
 
 /* Why cause if (!numProducts) deleteShoppingCart; was before var numProducts = 10 */
+
+/* declare variables at the top of each scope */
+/* declare functions first and only use them after declaration */
+var x = 1; // will create property on window object
+let y = 2; // WON'T create property on window object
+const z = 3; // WON'T create property on window object
+
+/* proof? */
+console.log(x === window.x); // true
+console.log(y === window.y); // false
+console.log(z === window.z); // false
