@@ -5,8 +5,9 @@
 of the code. calcAge creates own scope - equivilent to the variable environment of 
 its execution context. */
 const calcAge = (birthYear) => {
-  const age = currentYear - birthYear;
-  /* within calcAge logging calcAge to the console */
+  const age = 2023 - birthYear;
+  /* within calcAge logging calcAge to the console. this works cause firstName 
+  is defined in global scope */
   console.log(firstName);
   return age;
 };
