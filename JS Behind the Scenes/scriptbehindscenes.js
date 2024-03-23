@@ -261,5 +261,8 @@ after we changed lastName on jessicaCopy. */
 /* HOWEVER, Object.assign only works on the first level - object.assign only creates a shallow 
 copy - we want a deep clone. */
 
-/* I added Emily array that is in both objects however, below will change the array
+/* I added family array that is in both objects however, below will change the array
 in jessicaCopy */
+jessicaCopy.family.push("Mary");
+jessicaCopy.family.push("John");
+/* Manipulating an object (family array) in a copied object (jessicaCopy). */
