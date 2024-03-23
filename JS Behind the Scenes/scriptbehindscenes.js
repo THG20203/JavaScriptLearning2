@@ -229,3 +229,6 @@ const jessica = {
 };
 
 const marriedJessica = jessica;
+marriedJessica.lastName = "Davies"; // this will not give us the result we expect
+console.log("Before marriage:", jessica); // Davies
+console.log("After marriage:", marriedJessica); // Davies
