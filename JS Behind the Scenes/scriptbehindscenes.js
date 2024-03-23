@@ -123,6 +123,11 @@ const tristan = {
   calcAge4: function () {
     console.log(this);
     console.log(2037 - this.year);
+    /* function in a method */
+    const isMillenial = function () {
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
 
   greet: () => {
@@ -133,3 +138,8 @@ const tristan = {
 tristan.greet();
 /* Hey undefined -> reason is arrow function, arrow functions don't get their 
 own this keyword. greet is an arrow function */
+tristan.calcAge4();
+/* scriptbehindscenes.js:128 Uncaught TypeError: Cannot read properties of undefined (reading 'year')
+    at isMillenial (scriptbehindscenes.js:128:24)
+    at Object.calcAge4 (scriptbehindscenes.js:130:5)
+    at scriptbehindscenes.js:141:9 */
