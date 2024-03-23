@@ -127,7 +127,8 @@ const tristan = {
     const isMillenial = function () {
       console.log(this.year >= 1981 && this.year <= 1996);
     };
-    isMillenial();
+    isMillenial(); /* this keyword is undefined in isMillenial when CalcAge4 is called 
+    cuase isMillenial is just a NORMAL function call even though it happens inside a method */
   },
 
   greet: () => {
