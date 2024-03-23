@@ -242,6 +242,8 @@ const jessica2 = {
   firstName: "Jessica",
   lastName: "Williams",
   age: 27,
+  /* adding an array in original object - cause array is just an object */
+  family: ["Alice", "Bob"],
 };
 
 /* use Object.assign to merge two objects */
@@ -255,3 +257,9 @@ console.log("After marriage:", marriedJessica); // "Davies"
 
 /* With object.assign and copying the function we can preserve the last name Williams.
 after we changed lastName on jessicaCopy. */
+
+/* HOWEVER, Object.assign only works on the first level - object.assign only creates a shallow 
+copy - we want a deep clone. */
+
+/* I added Emily array that is in both objects however, below will change the array
+in jessicaCopy */
