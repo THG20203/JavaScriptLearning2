@@ -79,20 +79,20 @@ const z = 3; // WON'T create property on window object
 // console.log(z === window.z); // false
 
 /* THIS KEYWORD */
-console.log(this); // undefined cause in strict mode
+//console.log(this); // undefined cause in strict mode
 
 /* regular function */
 const calcAge2 = function (birthYear) {
-  console.log(2037 - birthYear);
-  console.log(this);
+  //  console.log(2037 - birthYear);
+  //  console.log(this);
 };
 calcAge2(1991); // regular function call  - cause the function call doesn't have an owner
 
 /* arrow function - uses this keyword of parent scope - so its window for arrow - 
 cause thats the this keyword in the global scope. */
 const calcAgeArrow = (birthYear) => {
-  console.log(2037 - birthYear);
-  console.log(this);
+  //  console.log(2037 - birthYear);
+  //  console.log(this);
 };
 calcAgeArrow(1980);
 
@@ -101,7 +101,7 @@ calcAgeArrow(1980);
 const jonas = {
   year: 1991,
   calcAge3: function () {
-    console.log(this);
+    //    console.log(this);
   },
 };
 jonas.calcAge3();
@@ -121,7 +121,7 @@ const tristan = {
   firstName: "Tristan",
   year: 1997,
   calcAge4: function () {
-    console.log(2037 - this.year);
+    //    console.log(2037 - this.year);
     /* function in a method */
     /* PRE ES6 */
     /* self = this is solution to the issue - its defined as this keyword for isMillenial method. */
@@ -135,14 +135,14 @@ const tristan = {
     /* ES6 solution -> an arrow function. Why? Cause arrow function doesn't have its own this 
     keyword - will use this keyword of parent scope */
     const isMillenial = () => {
-      console.log(this);
-      console.log(this.year >= 1981 && this.year <= 1996);
+      //      console.log(this);
+      //      console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
   },
 
   greet: () => {
-    console.log(`Hey ${this.firstName}`);
+    //    console.log(`Hey ${this.firstName}`);
   },
 };
 
@@ -158,7 +158,7 @@ tristan.calcAge4();
 /* Arguments */
 /* arguments keyword */
 const addExpr2 = function (a, b) {
-  console.log(arguments);
+  //  console.log(arguments);
   return a + b;
 };
 addExpr2(2, 5); // this will produce an array in the console - 2 and 5 - the two arguments
@@ -166,7 +166,7 @@ addExpr2(2, 5, 3, 12); // can add to arguments array legally - can use them in f
 
 /* but you can't do this for arrow functions */
 var addArrow2 = (a, b) => {
-  console.log(arguments);
+  //  console.log(arguments);
   return a + b;
 };
 addArrow2(2, 5, 4, 3); // gives you an error - arguments is not defined
