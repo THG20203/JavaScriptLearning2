@@ -206,4 +206,7 @@ Undefined
 Null
 Symbol
 BigInt
-*/
+Everything else - Objects:
+Object literal
+Array
+Functions Many More..*/
