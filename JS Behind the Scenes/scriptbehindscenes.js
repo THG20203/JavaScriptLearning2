@@ -189,3 +189,9 @@ const me = {
 const friend = me;
 /* Originally name and age are the same, but lets say we have different ages */
 friend.age = 27; // changing friend.age but clearly not me.age
+console.log("Friend:", friend);
+console.log("Me:", me);
+
+/* What will console.log above show? Both me and friend have age 27 */
+// Friend {name: "Tristan", age: 27}
+// Me {name: "Tristan", age: 27}
