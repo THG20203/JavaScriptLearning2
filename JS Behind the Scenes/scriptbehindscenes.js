@@ -121,16 +121,24 @@ const tristan = {
   firstName: "Tristan",
   year: 1997,
   calcAge4: function () {
-    console.log(this);
     console.log(2037 - this.year);
     /* function in a method */
+    /* PRE ES6 */
     /* self = this is solution to the issue - its defined as this keyword for isMillenial method. */
-    const self = this; // self or that - pre ES6
+    /* const self = this; // self or that - pre ES6
     const isMillenial = function () {
       console.log(self.year >= 1981 && self.year <= 1996);
     };
     isMillenial(); /* this keyword is undefined in isMillenial when CalcAge4 is called 
     cuase isMillenial is just a NORMAL function call even though it happens inside a method */
+
+    /* ES6 solution -> an arrow function. Why? Cause arrow function doesn't have its own this 
+    keyword - will use this keyword of parent scope */
+    const isMillenial = () => {
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
+    };
+    isMillenial();
   },
 
   greet: () => {
