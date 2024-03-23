@@ -215,3 +215,10 @@ Functions Many More..*/
 /* Objects = Reference Type */
 
 /* PRIMITIVES VS OBJECTS IN PRACTICE */
+let lastName = "Williams"; // initial value of last name
+let oldLastName = lastName; // remember the 'old last name' before it changes
+lastName = "Davies"; // Williams gets married, changes last name to davies
+console.log(lastName); // Davies
+console.log(oldLastName); // Williams
+
+/* Do the same thing with a reference value - which will be stored in the heap */
