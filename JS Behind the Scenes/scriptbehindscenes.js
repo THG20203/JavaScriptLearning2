@@ -195,3 +195,15 @@ console.log("Me:", me);
 /* What will console.log above show? Both me and friend have age 27 */
 // Friend {name: "Tristan", age: 27}
 // Me {name: "Tristan", age: 27}
+
+/* But I only changed the age of friend NOT me? */
+
+/* First remember primitive data types of JavaScript:
+Number
+String
+Boolean
+Undefined
+Null
+Symbol
+BigInt
+*/
