@@ -9,12 +9,12 @@ const calcAge = (birthYear) => {
 
   function printAge() {
     const output = `${firstName} are the ${age}, born in ${birthYear}`;
-    // console.log(output);
+    console.log(output);
 
     /* block scope in printAge function */
     if (birthYear >= 1981 && birthYear <= 1996) {
       const string = `Oh, and you're a millenial, ${firstName}`;
-      //  console.log(string);
+      console.log(string);
     }
   }
   /* have to call printAge() inside calcAge cause printAge is a local function */
@@ -29,18 +29,18 @@ calcAge(1991);
 
 /* HOISTING */
 /* hoisting with variables */
-//console.log(me); // undefined - var values hoisted to undefined
-//console.log(job); // cannot access job before initialization
-//console.log(year); // cannot access year before initialization
+console.log(me); // undefined - var values hoisted to undefined
+console.log(job); // cannot access job before initialization
+console.log(year); // cannot access year before initialization
 
 var me = "Jonas";
 let job = "teacher";
 const year = 1991;
 
 /* hoisting with functions */
-//console.log(addDeclr(2, 3)); // get 5 -> can call function declaration before defined in code
-//console.log(addExpr(2, 3)); // cannot access addExpr before initialisation
-//console.log(arrow(2, 3)); // cannot access addExpr before initialisation
+console.log(addDeclr(2, 3)); // get 5 -> can call function declaration before defined in code
+console.log(addExpr(2, 3)); // cannot access addExpr before initialisation
+console.log(arrow(2, 3)); // cannot access addExpr before initialisation
 
 /* declaration */
 function addDeclr(a, b) {
@@ -62,7 +62,7 @@ if (!numProducts) deleteShoppingCart;
 var numProducts = 10;
 
 function deleteShoppingCart() {
-  //  console.log("All products deleted"); // get all products deleted despite numProducts = 10
+  console.log("All products deleted"); // get all products deleted despite numProducts = 10
 }
 
 /* Why cause if (!numProducts) deleteShoppingCart; was before var numProducts = 10 */
@@ -74,25 +74,25 @@ let y = 2; // WON'T create property on window object
 const z = 3; // WON'T create property on window object
 
 /* proof? */
-// console.log(x === window.x); // true
-// console.log(y === window.y); // false
-// console.log(z === window.z); // false
+console.log(x === window.x); // true
+console.log(y === window.y); // false
+console.log(z === window.z); // false
 
 /* THIS KEYWORD */
-//console.log(this); // undefined cause in strict mode
+console.log(this); // undefined cause in strict mode
 
 /* regular function */
 const calcAge2 = function (birthYear) {
-  //  console.log(2037 - birthYear);
-  //  console.log(this);
+  console.log(2037 - birthYear);
+  console.log(this);
 };
 calcAge2(1991); // regular function call  - cause the function call doesn't have an owner
 
 /* arrow function - uses this keyword of parent scope - so its window for arrow - 
 cause thats the this keyword in the global scope. */
 const calcAgeArrow = (birthYear) => {
-  //  console.log(2037 - birthYear);
-  //  console.log(this);
+  console.log(2037 - birthYear);
+  console.log(this);
 };
 calcAgeArrow(1980);
 
@@ -101,7 +101,7 @@ calcAgeArrow(1980);
 const jonas = {
   year: 1991,
   calcAge3: function () {
-    //    console.log(this);
+    console.log(this);
   },
 };
 jonas.calcAge3();
@@ -121,7 +121,7 @@ const tristan = {
   firstName: "Tristan",
   year: 1997,
   calcAge4: function () {
-    //    console.log(2037 - this.year);
+    console.log(2037 - this.year);
     /* function in a method */
     /* PRE ES6 */
     /* self = this is solution to the issue - its defined as this keyword for isMillenial method. */
@@ -135,14 +135,14 @@ const tristan = {
     /* ES6 solution -> an arrow function. Why? Cause arrow function doesn't have its own this 
     keyword - will use this keyword of parent scope */
     const isMillenial = () => {
-      //      console.log(this);
-      //      console.log(this.year >= 1981 && this.year <= 1996);
+      console.log(this);
+      console.log(this.year >= 1981 && this.year <= 1996);
     };
     isMillenial();
   },
 
   greet: () => {
-    //    console.log(`Hey ${this.firstName}`);
+    console.log(`Hey ${this.firstName}`);
   },
 };
 
@@ -158,7 +158,7 @@ tristan.calcAge4();
 /* Arguments */
 /* arguments keyword */
 const addExpr2 = function (a, b) {
-  //  console.log(arguments);
+  console.log(arguments);
   return a + b;
 };
 addExpr2(2, 5); // this will produce an array in the console - 2 and 5 - the two arguments
@@ -166,7 +166,7 @@ addExpr2(2, 5, 3, 12); // can add to arguments array legally - can use them in f
 
 /* but you can't do this for arrow functions */
 var addArrow2 = (a, b) => {
-  //  console.log(arguments);
+  console.log(arguments);
   return a + b;
 };
 addArrow2(2, 5, 4, 3); // gives you an error - arguments is not defined
@@ -177,8 +177,8 @@ let age = 30;
 /* preserving oldAge in variable below  - at that point age was still 30 */
 let oldAge = age;
 age = 31;
-// console.log(age); // 31
-// console.log(oldAge); // 30
+console.log(age); // 31
+console.log(oldAge); // 30
 
 /* another scenario - object with name tristan, age 30 */
 const me = {
@@ -222,3 +222,10 @@ console.log(lastName); // Davies
 console.log(oldLastName); // Williams
 
 /* Do the same thing with a reference value - which will be stored in the heap */
+const jessica = {
+  firstName: "Jessica",
+  lastName: "Williams",
+  age: 27,
+};
+
+const marriedJessica = jessica;
