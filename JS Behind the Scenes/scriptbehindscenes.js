@@ -266,3 +266,8 @@ in jessicaCopy */
 jessicaCopy.family.push("Mary");
 jessicaCopy.family.push("John");
 /* Manipulating an object (family array) in a copied object (jessicaCopy). */
+
+console.log("Before marriage:", jessica2);
+console.log("After marriage:", jessicaCopy);
+/* Both objects have a family with four members - family object deeply nested object so
+behind the scenes object.assign did not copy it to the new object. */
