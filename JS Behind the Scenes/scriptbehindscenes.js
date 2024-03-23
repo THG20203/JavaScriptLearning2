@@ -213,3 +213,5 @@ Functions Many More..*/
 
 /* Primitive = Primitive Types */
 /* Objects = Reference Type */
+
+/* PRIMITIVES VS OBJECTS IN PRACTICE */
