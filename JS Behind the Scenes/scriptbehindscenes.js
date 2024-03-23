@@ -170,3 +170,10 @@ var addArrow2 = (a, b) => {
   return a + b;
 };
 addArrow2(2, 5, 4, 3); // gives you an error - arguments is not defined
+
+/* PRIMITIVES Vs. OBJECTS (PRIMITIVE VS. REFERENCE TYPES) */
+/* primitives - simple; numbers, strings, booleans etc */
+let age = 30;
+/* preserving oldAge in variable below */
+let oldAge = age;
+age = 31;
