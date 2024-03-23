@@ -154,3 +154,19 @@ tristan.calcAge4();
     at isMillenial (scriptbehindscenes.js:128:24)
     at Object.calcAge4 (scriptbehindscenes.js:130:5)
     at scriptbehindscenes.js:141:9 */
+
+/* Arguments */
+/* arguments keyword */
+const addExpr2 = function (a, b) {
+  console.log(arguments);
+  return a + b;
+};
+addExpr2(2, 5); // this will produce an array in the console - 2 and 5 - the two arguments
+addExpr2(2, 5, 3, 12); // can add to arguments array legally - can use them in functions
+
+/* but you can't do this for arrow functions */
+var addArrow2 = (a, b) => {
+  console.log(arguments);
+  return a + b;
+};
+addArrow2(2, 5, 4, 3); // gives you an error - arguments is not defined
