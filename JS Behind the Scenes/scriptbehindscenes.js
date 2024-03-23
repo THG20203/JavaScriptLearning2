@@ -174,6 +174,18 @@ addArrow2(2, 5, 4, 3); // gives you an error - arguments is not defined
 /* PRIMITIVES Vs. OBJECTS (PRIMITIVE VS. REFERENCE TYPES) */
 /* primitives - simple; numbers, strings, booleans etc */
 let age = 30;
-/* preserving oldAge in variable below */
+/* preserving oldAge in variable below  - at that point age was still 30 */
 let oldAge = age;
 age = 31;
+// console.log(age); // 31
+// console.log(oldAge); // 30
+
+/* another scenario - object with name tristan, age 30 */
+const me = {
+  name: "Tristan",
+  age: 27,
+};
+
+const friend = me;
+/* Originally name and age are the same, but lets say we have different ages */
+friend.age = 27; // changing friend.age but clearly not me.age
