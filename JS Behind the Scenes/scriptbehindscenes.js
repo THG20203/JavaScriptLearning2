@@ -125,7 +125,7 @@ const tristan = {
     console.log(2037 - this.year);
     /* function in a method */
     /* self = this is solution to the issue - its defined as this keyword for isMillenial method. */
-    const self = this;
+    const self = this; // self or that - pre ES6
     const isMillenial = function () {
       console.log(self.year >= 1981 && self.year <= 1996);
     };
