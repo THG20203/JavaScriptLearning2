@@ -232,3 +232,26 @@ const marriedJessica = jessica;
 marriedJessica.lastName = "Davies"; // this will not give us the result we expect
 console.log("Before marriage:", jessica); // Davies
 console.log("After marriage:", marriedJessica); // Davies
+
+/* we can't assign a completely different object to married jessica */
+/* we can't change it in the stack to a new memory address */
+// marriedJessica = {};
+
+// Copying objects
+const jessica2 = {
+  firstName: "Jessica",
+  lastName: "Williams",
+  age: 27,
+};
+
+/* use Object.assign to merge two objects */
+/* create new object where all the properties */
+/* create completely new object where all the properties are really copied,
+so store this new object in a const called jessica copy */
+const jessicaCopy = Object.assign({}, jessica2);
+jessicaCopy.lastName = "Davies";
+console.log("Before marriage:", jessica2); // "Williams"
+console.log("After marriage:", marriedJessica); // "Davies"
+
+/* With object.assign and copying the function we can preserve the last name Williams.
+after we changed lastName on jessicaCopy. */
