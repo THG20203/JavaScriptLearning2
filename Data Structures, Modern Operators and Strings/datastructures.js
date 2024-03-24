@@ -30,14 +30,20 @@ console.log(arr); // (3) [2, 3, 4]; - can see it is not affected.
 console.log(first, second); // Italian Pizzeria
 
 /* taking first category and the third? Leave a gap in destructuring operator */
-const [main, , secondary] = restaurant.categories;
+let [main, , secondary] = restaurant.categories;
 console.log(main, secondary); // Italian Vegetarian
 
 /* use destructuring to do a lot of things. i.e. owner decided to switch main and secondary category */
 
 /* WITHOUT destructuring would have to create a temporary variable, assign one of them - i.e. main,
 then main to secondary, then secondary to temp */
-/* I couldn't do main = secondary, then secondary = main, cause by then, would've overwritten main variable */
+/* I couldn't do main = secondary, then secondary = main, cause by then, 
+would've overwritten main variable. Need temp variable in middle */
 const temp = main;
 main = secondary;
 secondary = temp;
+console.log(main, secondary); // Vegetarian Italian
+
+/* with destructuring much easier - can create array with both of them */
+
+[secondary, main];
