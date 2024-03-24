@@ -60,6 +60,22 @@ destruct the result into different variables - allows us to return multiple valu
 a function. */
 
 /* Garlic bread (3rd / '2' choice in array of starterMenu, Pizza 1st / '0' of mainMenu */
-const [starter, mainCourse] = console.log(restaurant.order(2, 0)); // (2) ["Garlic Bread", "Pizza"]
+const [starter, mainCourse] = console.log(restaurant.order(2, 0));
 // console.log of the desctructuring
-console.log(starter, mainCourse);
+console.log(starter, mainCourse); // (2) ["Garlic Bread", "Pizza"]
+
+/* destructuring from a nested array (one array inside of another) */
+const nested = [2, 4, [5, 6]];
+/* define two varialbes using destructuring assignment */
+// const [i, , j] = nested;
+// console.log(i, j); // (2) [5, 6]
+
+/* what if we wanted to do individual values? - we'd have to do 
+destructuring within destructuring */
+const [i, , [j, k]] = nested;
+console.log(i, j, k); // 2 5 6
+
+/* can also set default values when destructing them - useful when don't know
+the length of the array. Can happen in real world applications */
+const [p = 1, q = 1, r = 1] = [8, 9];
+console.log(p, q, r); // 8 9 undefined ordinarily but with = 1, we've got 1 as a default
