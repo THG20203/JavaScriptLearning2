@@ -3,9 +3,13 @@
 const restaurant = {
   name: "Classico Italiano",
   location: "Via angelo Tavanti 232, Firenze, Italy",
-  categories: ["Italian", "PIzzaeria", "Vegetarian", "Organic"],
+  categories: ["Italian", "Pizzaeria", "Vegetarian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
+  order: function (starterIndex, mainIndex) {
+    /* return the content of the arrays based on given indexs */
+    return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
 };
 
 /* destrcuturing - ES6 feature - unpacking values from array / object into seperate varialbes.
@@ -51,4 +55,11 @@ console.log(main, secondary); // Vegetarian Italian
 
 /* with descturing, don't need temporary variable in the middle */
 
-/* Another trick with desctructuring - function returning an array */
+/* Another trick with desctructuring - function returning an array. Then can immediately 
+destruct the result into different variables - allows us to return multiple values from
+a function. */
+
+/* Garlic bread (3rd / '2' choice in array of starterMenu, Pizza 1st / '0' of mainMenu */
+const [starter, mainCourse] = console.log(restaurant.order(2, 0)); // (2) ["Garlic Bread", "Pizza"]
+// console.log of the desctructuring
+console.log(starter, mainCourse);
