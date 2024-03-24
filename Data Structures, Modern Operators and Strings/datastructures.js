@@ -25,3 +25,19 @@ console.log(x, y, z); // 2, 3, 4 - in number form - so destructured.
 /* desctructuring sounds desctructive - but the original array is not affected */
 /* we are not destroying the array, we are only descturing */
 console.log(arr); // (3) [2, 3, 4]; - can see it is not affected.
+
+// const [first, second] = restaurant.categories; // can see don't have to take all the elements out of the array.
+console.log(first, second); // Italian Pizzeria
+
+/* taking first category and the third? Leave a gap in destructuring operator */
+const [main, , secondary] = restaurant.categories;
+console.log(main, secondary); // Italian Vegetarian
+
+/* use destructuring to do a lot of things. i.e. owner decided to switch main and secondary category */
+
+/* WITHOUT destructuring would have to create a temporary variable, assign one of them - i.e. main,
+then main to secondary, then secondary to temp */
+/* I couldn't do main = secondary, then secondary = main, cause by then, would've overwritten main variable */
+const temp = main;
+main = secondary;
+secondary = temp;
