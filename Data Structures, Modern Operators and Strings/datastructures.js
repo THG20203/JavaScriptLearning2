@@ -50,3 +50,5 @@ console.log(main, secondary); // Vegetarian Italian
 /* we are not using let or const above, cause we are simply reassigning values of two variables */
 
 /* with descturing, don't need temporary variable in the middle */
+
+/* Another trick with desctructuring - function returning an array */
