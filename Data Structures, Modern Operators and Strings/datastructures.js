@@ -46,4 +46,7 @@ console.log(main, secondary); // Vegetarian Italian
 
 /* with destructuring much easier - can create array with both of them */
 
-[secondary, main];
+[main, secondary] = [secondary, main]; // main, secondary equals the destructuring of this array
+/* we are not using let or const above, cause we are simply reassigning values of two variables */
+
+/* with descturing, don't need temporary variable in the middle */
