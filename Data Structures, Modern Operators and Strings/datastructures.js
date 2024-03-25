@@ -1,5 +1,9 @@
+/* destructuring - ES6 feature - unpacking values from array / object into seperate variables.
+desctructuring breaks complex data structure down into a smaller structure (like a variable). */
+
 "use strict";
 
+/* destructuring arrays */
 const restaurant = {
   name: "Classico Italiano",
   location: "Via angelo Tavanti 232, Firenze, Italy",
@@ -7,13 +11,9 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
   order: function (starterIndex, mainIndex) {
-    /* return the content of the arrays based on given indexs */
     return [this.startMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
-
-/* destrcuturing - ES6 feature - unpacking values from array / object into seperate varialbes.
-desctructuring breaks complex data structure down into a smaller structure (like a variable). */
 
 /* use destrcturing -> break down array -> store into varaibles in a very easy way. */
 const arr = [2, 3, 4];
@@ -31,7 +31,7 @@ console.log(x, y, z); // 2, 3, 4 - in number form - so destructured.
 console.log(arr); // (3) [2, 3, 4]; - can see it is not affected.
 
 // const [first, second] = restaurant.categories; // can see don't have to take all the elements out of the array.
-console.log(first, second); // Italian Pizzeria
+// console.log(first, second); // Italian Pizzeria
 
 /* taking first category and the third? Leave a gap in destructuring operator */
 let [main, , secondary] = restaurant.categories;
@@ -60,9 +60,9 @@ destruct the result into different variables - allows us to return multiple valu
 a function. */
 
 /* Garlic bread (3rd / '2' choice in array of starterMenu, Pizza 1st / '0' of mainMenu */
-const [starter, mainCourse] = console.log(restaurant.order(2, 0));
+// const [starter, mainCourse] = console.log(restaurant.order(2, 0));
 // console.log of the desctructuring
-console.log(starter, mainCourse); // (2) ["Garlic Bread", "Pizza"]
+// console.log(starter, mainCourse); // (2) ["Garlic Bread", "Pizza"]
 
 /* destructuring from a nested array (one array inside of another) */
 const nested = [2, 4, [5, 6]];
@@ -79,3 +79,21 @@ console.log(i, j, k); // 2 5 6
 the length of the array. Can happen in real world applications */
 const [p = 1, q = 1, r = 1] = [8, 9];
 console.log(p, q, r); // 8 9 undefined ordinarily but with = 1, we've got 1 as a default
+
+/* destructuring objects */
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories); // (4) ["Italian", "Pizzeria", "Vegetarian"]
+
+/* variable names different from the property names */
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurant);
+
+/* default values for property that doesn't exist on the object with = [] */
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters);
+
+/* mutating variables whilst destructuring objects */
