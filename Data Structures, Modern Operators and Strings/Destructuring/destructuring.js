@@ -117,3 +117,9 @@ console.log(a, b); // 23 7
 
 /* nested objects - create two variables open and close and these should 
 contain the open and close hours for Friday */
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close); // 11, 23
+
+/* practical application */
