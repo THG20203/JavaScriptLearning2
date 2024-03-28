@@ -42,3 +42,8 @@ numbers[i] to the current value of sum and updates sum with the result. */
 console.log(add(2, 3)); // 5
 console.log(add(5, 3, 7, 2)); // 17
 console.log(add(8, 11, 6, 5, 3, 7, 2)); // 42
+
+const x = [25, 5, 7];
+/* Add the three numbers above, how would we do that? */
+/* Use the spread operator */
+add(...x); // unpacking them to be packed in an array in add function above using rest.
