@@ -26,3 +26,8 @@ console.log(guests1); // still 10 because 0 is falsy value
 /* The same as: */
 const guests2 = restaurant.numGuests || 10;
 console.log(guests2); // still 10 because 0 is falsy value
+
+/* AND operator - works opposite way to the OR operator */
+console.log(0 && "Jonas"); // result of 0
+/* so && short circuits at the first falsy value and returns it without
+evaluating anymore. */
