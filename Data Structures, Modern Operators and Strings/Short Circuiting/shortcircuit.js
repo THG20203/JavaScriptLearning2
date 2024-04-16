@@ -18,4 +18,11 @@ console.log(undefined || null); // null - undefined not a truthy value.
 console.log(undefined || 0 || "" || "Hello" || 23 || null);
 /* result of above will be Hello - cause preceding values will be falsy */
 
-/* More practical application? Ternary operators */
+/* More practical application vs ternary operator */
+restaurant.numGuests = 0;
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+console.log(guests1); // still 10 because 0 is falsy value
+
+/* The same as: */
+const guests2 = restaurant.numGuests || 10;
+console.log(guests2); // still 10 because 0 is falsy value
