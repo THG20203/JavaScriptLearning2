@@ -31,3 +31,5 @@ console.log(guests2); // still 10 because 0 is falsy value
 console.log(0 && "Jonas"); // result of 0
 /* so && short circuits at the first falsy value and returns it without
 evaluating anymore. */
+
+console.log("Hello" && 23 && null && "Jonas"); // answer is null -> first falsy value
