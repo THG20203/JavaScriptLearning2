@@ -26,3 +26,21 @@ rest2.numGuests ||= 10; // 10 cause there was nothing there - rest2.numGuests wa
 /* If numGuests in rest1 changed to 0? - use nullish logical assingment */
 rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
+
+/* Logical && assingment operator */
+// rest2.owner = rest2.owner && "<ANONYMOUS>";
+/* rest2.owner is truthy, therefore second value will be avaluated and returned */
+
+/* previously const rest2 = {
+  name: "La Piazza",
+  owner: "Giovanni Rossi",
+}; and now it looks like:
+
+const rest2 = {
+  name: "La Piazza",
+  owner: "<ANONYMOUS>",
+}; */
+
+/* assigning value to variable already defined */
+rest1.owner &&= "<ANONYMOUS>"; // falsy so not replaced
+rest2.owner &&= "<ANONYMOUS>"; // truthy so replaced with anonymous
