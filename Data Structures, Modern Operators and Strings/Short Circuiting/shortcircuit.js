@@ -14,3 +14,8 @@ evaluated by JavaScript - this is short circuiting. */
 console.log("" || "Jonas"); // Jonas - "" not a truthy value
 console.log(true || 0); // true
 console.log(undefined || null); // null - undefined not a truthy value.
+
+console.log(undefined || 0 || "" || "Hello" || 23 || null);
+/* result of above will be Hello - cause preceding values will be falsy */
+
+/* More practical application? Ternary operators */
