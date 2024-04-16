@@ -33,3 +33,15 @@ console.log(0 && "Jonas"); // result of 0
 evaluating anymore. */
 
 console.log("Hello" && 23 && null && "Jonas"); // answer is null -> first falsy value
+
+/* another practical example */
+
+/* if statement checking orderPizza exists - if so, we execute it */
+if (restaurant.orderPizza) {
+  restaurant.orderPizza("mushrooms", "spinach");
+}
+
+/* with knowledge of && operator we can do: */
+restaurant.orderPizza && restaurant.orderPizza("mushrooms", "spinach");
+/* if restaurant.orderPizza doesn't exist (is undefined) it'll short circuit
+the evaluation and nothing will happen. */
